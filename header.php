@@ -44,7 +44,14 @@
     <h1 class="bd-title mt-0 hdfont fw-bold"><?php the_archive_title();?></h1>
     <p class="bd-lead">
     <nav aria-label="breadcrumb">
-    <?php custom_breadcrumb(); ?>
+    <?php 
+    if(is_woocommerce()){
+      woocommerce_breadcrumb();
+    }
+    else{
+    custom_breadcrumb(); 
+    }
+    ?>
     </nav>
     </p>
   </div>

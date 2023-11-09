@@ -5,7 +5,7 @@ if (!function_exists('mytheme_setup')):
 		add_theme_support('custom-logo');
 		add_theme_support('automatic-feed-links');
 		add_theme_support('post-thumbnails' );
-		add_theme_support('post-formats',  array( 'aside', 'gallery', 'quote', 'image', 'video' ));
+		add_theme_support('post-formats',  array( 'post-formats', 'page','post','aside', 'gallery', 'quote', 'image', 'video' ));
 		add_theme_support('responsive-embeds' );
 		add_theme_support('html5', array( 'style','script'));
 		register_nav_menus( array(
@@ -64,8 +64,8 @@ function mytheme_widgets_init() {
 		'after_title'   => '</h3>',
 	) );
 	register_sidebar( array(
-		'name'          => __( 'Secondary Sidebar', 'mytheme' ),
-		'id'            => 'sidebar-2',
+		'name'          => __( 'Woo Sidebar', 'mytheme' ),
+		'id'            => 'woosidebar',
 		'before_widget' => '<ul><li id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</li></ul>',
 		'before_title'  => '<h3 class="widget-title">',
